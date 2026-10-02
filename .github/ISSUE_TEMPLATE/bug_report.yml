@@ -1,0 +1,38 @@
+name: Bug report
+description: A contract behaves differently from its documentation.
+labels: [bug]
+body:
+  - type: dropdown
+    id: contract
+    attributes:
+      label: Contract
+      options:
+        - fund-tracker
+        - expense-anchor
+        - sbt-badge
+        - truway-common
+        - Tooling, CI or docs
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: Function called, inputs, and the result or error you got.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: How to reproduce
+      description: A failing test, CLI commands, or a transaction hash.
+  - type: input
+    id: version
+    attributes:
+      label: Commit or release

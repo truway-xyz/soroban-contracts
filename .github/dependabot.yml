@@ -1,0 +1,19 @@
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    commit-message:
+      prefix: ci
+
+  # soroban-sdk upgrades change the contracts' WASM and are done by hand,
+  # together with the Stellar CLI and a redeployment plan.
+  - package-ecosystem: cargo
+    directory: /
+    schedule:
+      interval: monthly
+    ignore:
+      - dependency-name: soroban-sdk
+    commit-message:
+      prefix: chore

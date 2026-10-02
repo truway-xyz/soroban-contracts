@@ -1,0 +1,11 @@
+{
+  "network": "testnet",
+  "network_passphrase": "Test SDF Network ; September 2015",
+  "rpc_url": "https://soroban-testnet.stellar.org",
+  "admin": null,
+  "contracts": {
+    "fund-tracker": { "contract_id": null, "wasm_hash": null, "source_commit": null, "deployed_at": null },
+    "expense-anchor": { "contract_id": null, "wasm_hash": null, "source_commit": null, "deployed_at": null },
+    "sbt-badge": { "contract_id": null, "wasm_hash": null, "source_commit": null, "deployed_at": null }
+  }
+}

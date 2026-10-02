@@ -1,0 +1,7 @@
+# Pinned so that release WASM builds are reproducible.
+# Keep in sync with RUST_TOOLCHAIN in .github/workflows/ci.yml.
+[toolchain]
+channel = "1.96.0"
+targets = ["wasm32v1-none"]
+components = ["rustfmt", "clippy"]
+profile = "minimal"

@@ -1,0 +1,21 @@
+# Deployments
+
+One manifest per network. A manifest is the source of truth for which contract instances
+belong to this repository.
+
+| File | Network |
+|---|---|
+| [testnet.json](testnet.json) | Stellar testnet |
+| [mainnet.json](mainnet.json) | Stellar mainnet (public network) |
+
+Fields per contract:
+
+| Field | Meaning |
+|---|---|
+| `contract_id` | Deployed contract address (`C...`) |
+| `wasm_hash` | SHA-256 of the installed WASM |
+| `source_commit` | Commit of this repository the WASM was built from |
+| `deployed_at` | Deployment date (ISO 8601) |
+
+**Policy:** only instances deployed under Truway-controlled keys are listed. Instances
+deployed before this repository existed are retired and must not be used.
