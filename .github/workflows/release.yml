@@ -74,7 +74,7 @@ jobs:
               -d "{\"repository\":\"${{ github.server_url }}/${{ github.repository }}\",\"commitHash\":\"${{ github.sha }}\",\"jobId\":\"${{ github.job }}\",\"runId\":\"${{ github.run_id }}\",\"contractHash\":\"$hash\",\"packageName\":\"budget-treasury\"}" || true
             echo
           done
-      - uses: actions/attest-build-provenance@v1
+      - uses: actions/attest-build-provenance@v4
         with:
           subject-path: dist/*.wasm
       - uses: actions/upload-artifact@v4
